@@ -23,20 +23,20 @@ ARG BUILD_VERSION
 
 # Labels
 LABEL \
-    io.hass.name="WireGuard Client" \
+    io.hass.name="WireGuard Client Anatoli4www" \
     io.hass.description="Fast, modern, secure VPN tunnel (Client)" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Fabio Bigmoby Mauro <https://github.com/bigmoby>" \
+    maintainer="Fabio Bigmoby Mauro <https://github.com/Anatoli4www>" \
     org.opencontainers.image.title="WireGuard Client" \
     org.opencontainers.image.description="Fast, modern, secure VPN tunnel" \
     org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
-    org.opencontainers.image.authors="Fabio Bigmoby Mauro <https://github.com/bigmoby>" \
+    org.opencontainers.image.authors="Fabio Bigmoby Mauro <https://github.com/Anatoli4www>" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="https://addons.community" \
-    org.opencontainers.image.source="https://github.com/bigmoby/addon-wireguard-client" \
-    org.opencontainers.image.documentation="https://github.com/bigmoby/addon-wireguard-client/blob/master/README.md" \
+    org.opencontainers.image.source="https://github.com/Anatoli4www/wg_client_ha" \
+    org.opencontainers.image.documentation="https://github.com/Anatoli4www/wg_client_ha/blob/master/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
