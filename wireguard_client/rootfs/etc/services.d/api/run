@@ -11,6 +11,7 @@ declare line
 declare peer
 declare transfer_rx
 declare transfer_tx
+declare l_h
 
 PORT=$(bashio::addon.port "80/tcp")
 if [[ $PORT -eq 0 ]]; then exit; fi
@@ -25,12 +26,14 @@ while true; do
             latest_handshake="$(exec date -d @"${line[5]}" 2>/dev/null || date -r "${line[5]}")"
             transfer_rx="${line[6]}"
             transfer_tx="${line[7]}"
+            l_h="$(exec date +%s @"${line[8]}" 2>/dev/null || date +%s "${line[8]}")"
 
             peer=$(bashio::var.json \
                     'endpoint' "${endpoint}" \
                     'latest_handshake' "${latest_handshake}" \
                     'transfer_rx' "^${transfer_rx}" \
-                    'transfer_tx' "^${transfer_tx}")
+                    'transfer_tx' "^${transfer_tx}" \
+                    'l_h' "^${l_h}")
 
             peers+=("peer_${count}" "^${peer}")
             (( count++ ))
